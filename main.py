@@ -16,7 +16,7 @@ def main():
             gameState = jogo.jogar(geracao.individuos[i], vel_jogo, scoreMax = 200000, jogoRapido = False)
             
             print(gameState)
-            [230, [66, 5, 0, 0], 3470, False]
+
             geracao.individuos[i].fitness(gameState)
             geracao.selecao(1)
 
