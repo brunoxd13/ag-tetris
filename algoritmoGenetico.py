@@ -119,7 +119,7 @@ class Geracao:
     ### ---------------------- selecao:
     ## Realiza a selecao dos numSelec melhor individuos baseados no score de uma simulacao do jogo.
     ## Ordena os individuos baseados nos scores e seleciona os numSelec melhores.
-    def selecao(self, numSelec):
+    def selecao(self, numSelec, best_individuos,score_medias_geracoes):
         #seleciona os melhores ja baseado nos scores
         #COMPARA TODOS OS INDIVIDUOS E MANTEM OS numSelec MELHORES
         
@@ -131,11 +131,13 @@ class Geracao:
             totalScore += self.individuos[i].score
 
         print("\n Score Médio: ", totalScore / pop)
+        score_medias_geracoes.append(totalScore / pop);
 
         melhorScoreTotal = 0
         for i in range(pop):
             if(self.individuos[i].score > melhorScoreTotal):
                 melhorScoreTotal = self.individuos[i].score
+                best_individuos.append(melhorScoreTotal)
 
         print("Melhor Score: ", melhorScoreTotal, "\n")
 
