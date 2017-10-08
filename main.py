@@ -33,17 +33,17 @@ def main():
     print(best_individuos)
     plt.subplot(211)
 
-    plt.title('Fitness Melhores Individuos por Geração')
+    plt.title('Fitness dos melhores indivíduos por geração')
     plt.plot(best_individuos)
-    plt.ylabel("Fitness Melhores Individuos")
+    plt.ylabel("Fitness dos melhores indivíduos")
     plt.xlabel("Gerações")
 
     plt.subplot(212)
-    print("Medias Fitness por Gerações:")
+    print("Medias do fitness por gerações:")
     print(score_medias_geracoes)
-    plt.title('Médias de Fitness de Individuos por Geração')
+    plt.title('Médias do fitness dos indivíduos por geração')
     plt.plot(score_medias_geracoes)
-    plt.ylabel("Media Fitness Geração")
+    plt.ylabel("Media do Fitness por Geração")
     plt.xlabel("Gerações")
     plt.subplots_adjust(top=0.94, bottom=0.11, left=0.12, right=0.95, hspace=0.85,
                         wspace=0.35)
