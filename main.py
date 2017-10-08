@@ -3,7 +3,6 @@ import algoritmoGenetico as ag
 
 def main():
     numInd = int(input("Qual o tamanho da população: "))
-    numInd = int(input("Qual o tamanho da população: "))
 
     geracao = ag.Geracao(numInd)
 
@@ -21,7 +20,7 @@ def main():
         geracao.reproduzir(10)
 
     print("melhor individuo!!!")
-    
+
     gameState = jogo.jogar(geracao.individuos[0], vel_jogo, 1)
 
     return(geracao)

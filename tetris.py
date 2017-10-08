@@ -156,13 +156,13 @@ PIECES = {'S': S_SHAPE_TEMPLATE,
           'O': O_SHAPE_TEMPLATE,
           'T': T_SHAPE_TEMPLATE}
 
-pieceDistTop = { 'S': [2,1],
-                          'Z': [2,1],
-                          'J': [1,1,2,1],
-                          'L': [1,1,2,1],
-                          'I': [0,2],
-                          'O': [2],
-                          'T': [1,1,2,1] }
+pieceDistTop = {'S': [2,1],
+                'Z': [2,1],
+                'J': [1,1,2,1],
+                'L': [1,1,2,1],
+                'I': [0,2],
+                'O': [2],
+                'T': [1,1,2,1]}
 
 def main():
     global FPSCLOCK, DISPLAYSURF, BASICFONT, BIGFONT
@@ -568,7 +568,7 @@ def calcularInfosDaJogada(board, peca, x, r, buracosTotaisAntes, tampasTotaisAnt
         #LINHAS REMOVIDAS
     numLinhasCompletas = removeCompleteLines(newBoard)
     
-        #BURACOS TOTAIS
+
     tampasTotaisDepois = 0
     buracosTotaisDepois = 0
     alturaTotal = 0
