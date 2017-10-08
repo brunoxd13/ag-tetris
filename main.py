@@ -22,7 +22,7 @@ def main():
         print (' \n')
 
         for i in range(qtInd):
-            gameState = jogo.jogar(geracao.individuos[i], vel_jogo, scoreMax = 200000, jogoRapido = False)
+            gameState = jogo.jogar(geracao.individuos[i], vel_jogo, scoreMax = 200000, jogoRapido = True)
             geracao.individuos[i].fitness(gameState)
             print("Individuo: "+ (i + 1).__str__() + " score:" + geracao.individuos[i].score.__str__())
         geracao.selecao(melhores, best_individuos, score_medias_geracoes)
@@ -45,7 +45,7 @@ def main():
     plt.plot(score_medias_geracoes)
     plt.ylabel("Media do Fitness por Geração")
     plt.xlabel("Gerações")
-    plt.subplots_adjust(top=0.94, bottom=0.11, left=0.12, right=0.95, hspace=0.85,
+    plt.subplots_adjust(top=0.89, bottom=0.11, left=0.12, right=0.95, hspace=0.85,
                         wspace=0.35)
 
     plt.show()
