@@ -55,8 +55,6 @@ class Individuo():
                 infoJogada = t.calcularInfosDaJogada(board, peca, x, r, buracosTotaisAntes, tampasTotaisAntes)
                 if infoJogada[0]: #jogadaValida
 
-                    #self.pesos = [-3.78, 1.6, -2.31, -0.59, 4.0, 0.65, 6.52]
-
                     #calcular score do movimento
                     scoreMovimento = 0
                     for i in range(1, len(infoJogada)):
@@ -130,10 +128,17 @@ class Geracao:
         pop = len(self.individuos)
         print("");
         for i in range(pop):
-            print(self.individuos[i].score, end=" ")
             totalScore += self.individuos[i].score
+
         print("\n Score Médio: ", totalScore / pop)
-        print("melhor Score: ", self.individuos[pop-1], "\n")
+
+        melhorScoreTotal = 0
+        for i in range(pop):
+            if(self.individuos[i].score > melhorScoreTotal):
+                melhorScoreTotal = self.individuos[i].score
+
+        print("Melhor Score: ", melhorScoreTotal, "\n")
+
         self.individuos = self.individuos[:numSelec]
 
         return self
